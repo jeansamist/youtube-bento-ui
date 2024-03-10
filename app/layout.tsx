@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import avatar from "@/images/avatar.png";
+import me from "@/images/me.webp";
 import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 const inter = Inter({ subsets: ["latin"] });
@@ -176,6 +177,17 @@ export default function RootLayout({
           </div>
           <main>{children}</main>
         </ScrollArea>
+        <div className="fixed bottom-4 right-4 px-4 py-2 flex items-center z-50 gap-2 rounded-full bg-ghost font-medium text-xs opacity-70 hover:opacity-100 transition-opacity">
+          Coded by{" "}
+          <a href="https://jeansamist.vercel.app" className="font-bold">
+            @jeansamist
+          </a>
+          <Image
+            src={me}
+            alt="BAHA Ephraim"
+            className="w-6 aspect-square object-cover rounded-full bg-dark"
+          />
+        </div>
       </body>
     </html>
   );
