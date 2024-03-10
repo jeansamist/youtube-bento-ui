@@ -20,7 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-dark text-white">
       <body className={inter.className}>
-        <ScrollArea className="w-full h-screen">
+        <div className="flex lg:hidden w-full h-screen font-bold text-3xl items-center justify-center">
+          Resize your screen
+        </div>
+        <ScrollArea className="w-full h-screen hidden lg:block">
           <div className="py-6">
             <nav className="container grid grid-cols-12 gap-6 h-[60px]">
               <div className="bg-primary col-span-2 flex items-center justify-center rounded-xl">
